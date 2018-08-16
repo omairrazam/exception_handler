@@ -29,7 +29,7 @@ module ExceptionHandler
     # => ExceptionHandler.config.layouts -> will need to be deprecated
     # => ExceptionHandler.config.exceptions
     # => ExceptionHandler.config.custom_exceptions
-    attr_accessor :dev, :db, :email, :social, :layouts, :exceptions, :custom_exceptions
+    attr_accessor :dev, :db, :email, :show_trace, :social, :layouts, :exceptions, :custom_exceptions
 
     ###########################################
     ###########################################
@@ -66,7 +66,8 @@ module ExceptionHandler
           dev:    nil, # => defaults to "false" for dev mode
           db:     nil, # => defaults to :errors if true, else use "table_name" / :table_name
           email: 	nil, # => requires string email and ActionMailer
-
+          show_trace: false,
+          
           # => Used in "exception" layout
           social: {
             facebook: nil,

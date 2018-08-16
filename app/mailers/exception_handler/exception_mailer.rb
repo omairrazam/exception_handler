@@ -10,6 +10,7 @@ module ExceptionHandler
 
       def new_exception e
       	@exception = e
+        @show_trace = ExceptionHandler.config.show_trace
         mail to: ExceptionHandler.config.email
         Rails.logger.info "Exception Sent To → #{ExceptionHandler.config.email}"
       end

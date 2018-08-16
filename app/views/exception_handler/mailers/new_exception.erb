@@ -2,3 +2,6 @@
 
 <strong><u><%= @exception.response %> (<%= @exception.status %>)</u></strong>
 <p><%= @exception.message %></p>
+<% if @show_trace %>
+<p>@exception.trace</p>
+<% end %>
