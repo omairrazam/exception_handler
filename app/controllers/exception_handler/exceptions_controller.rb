@@ -1,6 +1,6 @@
 module ExceptionHandler
-  class ExceptionsController < ApplicationController
-
+  class ExceptionsController < Spree::StoreController
+    # include Spree::Core::Engine.routes.url_helpers
     # => Response
     # => http://www.justinweiss.com/articles/respond-to-without-all-the-pain/
     respond_to :html, :js, :json, :xml
